@@ -16,6 +16,8 @@ jobs:
           architecture: 'x64'
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
+      - name: Install dependencies
+        run: pip install coverage
       - name: Test with pytest and run coverage
         run: coverage run -m pytest
       - name: Generate coverage report
